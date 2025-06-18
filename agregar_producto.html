@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar Nuevo Producto</title>
+  <link rel="stylesheet" href="css/productos.css">
+  <script src="js/validar_producto.js" defer></script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Ingresar Nuevo Producto</h2>
+    <form name="productoForm" action="insertar_producto.php" method="POST" enctype="multipart/form-data" onsubmit="return validarProducto()">
+      <label>Nombre del producto:</label>
+      <input type="text" name="nombre" required>
+
+      <label>Lugar:</label>
+      <input type="text" name="lugar" required>
+
+      <label>Precio:</label>
+      <input type="number" name="precio" step="0.01" required>
+
+      <label>Imagen:</label>
+      <input type="file" name="imagen" accept="image/*" required>
+
+      <label>Descripción (habitaciones, medidas, baños, etc.):</label>
+      <textarea name="descripcion" rows="5" required></textarea>
+
+      <button type="submit">Agregar Producto</button>
+    </form>
+  </div
